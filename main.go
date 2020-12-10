@@ -48,7 +48,7 @@ func rssFeed(w http.ResponseWriter, r *http.Request) {
 	tmpFiles := []string{
 		"view/episode_view/episode.html",
 		"view/episode_view/header.html",
-		"view/episode_view/footer.html",
+		"view/footer.html",
 	}
 
 	tmpl := template.Must(template.ParseFiles(tmpFiles...))
@@ -79,7 +79,7 @@ func rssFeed2(w http.ResponseWriter, r *http.Request) {
 	tmpFiles := []string{
 		"view/episode_view/episode.html",
 		"view/episode_view/header.html",
-		"view/episode_view/footer.html",
+		"view/footer.html",
 	}
 
 	tmpl := template.Must(template.ParseFiles(tmpFiles...))
