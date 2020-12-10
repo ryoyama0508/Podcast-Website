@@ -1,0 +1,48 @@
+{{ define "view" }}
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>知らんでもいいこと.fm</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../../public/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    {{ template "header" .}}
+
+    <main class="episode">
+        <h1>Episodes</h1>
+        <div class="episode_container">
+            {{range .}}
+            <div class="player">
+                <h2><a href="/episode/ep:{{.Title}}">{{.Title}}</a></h2>
+                <p>{{.Description}}</p>
+                <p>
+                    <audio controls>
+                        {{range .Enclosures}}
+                        <source src="{{.URL}}" type="audio/mpeg">
+                        {{end}}
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+            </div>
+            {{end}}
+        </div>
+        <div class="episode_all_link">
+            <a href="/episodeAll">see all episodes (click here)</a>
+        </div>
+    </main>
+
+    <script src="../public/css/script.js"></script>
+
+    {{ template "footer" .}}
+</body>
+
+</html>
+
+{{ end }}

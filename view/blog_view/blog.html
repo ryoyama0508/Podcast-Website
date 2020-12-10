@@ -1,0 +1,33 @@
+{{ define "view" }}
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>知らんでもいいこと.fm</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../../public/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    {{ template "header" .}}
+
+    <main class="blog">
+        <h1>Blog</h1>
+        <div class="blog_container">
+            <iframe class="note-embed" src="https://note.com/embed/notes/n50e594af357a"></iframe>
+            <script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+        </div>
+    </main>
+
+    <script src="../public/css/script.js"></script>
+
+    {{ template "footer" .}}
+</body>
+
+</html>
+
+{{ end }}

@@ -1,0 +1,98 @@
+{{ define "view" }}
+
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>知らんでも良いこと.fm</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../public/css/fadeIn.js"></script>
+</head>
+
+<body>
+    {{ template "header" .}}
+
+    <main>
+        <div class="top">
+            <div class="top_description">
+                <h1 class="title">知らんでも<br>良いこと.fm</h1>
+                <p>明日知っていなくても特に困らないことを調査し、発表していくpodcast。
+                    「一見特に意味のないことが人生を楽しくする」をテーマに、毎週楽しく配信。</p>
+            </div>
+            <img src="../public/pics/logo.png" alt="icon">
+        </div>
+
+        <div class="player_and_sub_button">
+            <div class="player">
+                <h2>Featured Episode</h2>
+                <p><a href="/episode/ep:9:%20%e3%82%ab%e3%83%84%e3%82%a2%e3%82%b2%20in%20New%20York">9: カツアゲ in New
+                        York</a></p>
+                <p>Ryo と Miharu の二人で、New York でカツアゲ、Hawaii で観光客、Guam でヨンキュー、香港で引きこもり、Utah でモルモン教教会にいく、プログレッシブ
+                    Seattle、について話しました。</p>
+                <p>
+                    <audio controls="">
+                        <source
+                            src="https://anchor.fm/s/31a64358/podcast/play/22247407/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-10-7%2F64686993-2468-5804-0459-8befbc8cd7fa.mp3"
+                            type="audio/mpeg">
+
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+            </div>
+
+            <div class="sub_button">
+                <h2>Subscribe on your favorite platform</h2>
+                <div class="button_container">
+                    <a target="_blank"
+                        href="https://podcasts.apple.com/jp/podcast/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E6%96%87%E5%8C%96-kalo-terrace-talk/id1528022754?l=en%3Fl">
+                        <img src="../public/icons/apple_podcast.svg" width="300" height="100"></a>
+
+                    <a target="_blank"
+                        href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zMWE2NDM1OC9wb2RjYXN0L3Jzcw==">
+                        <img src="../public/icons/google_podcast.svg" width="300" height="100"></a>
+
+                    <a target="_blank" href="https://open.spotify.com/show/7KI1oiy1W1bsYMfLRzr8SF">
+                        <img src="../public/icons/spotify_podcast.svg" width="300" height="100"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <h2 class="prof_title">Profiles</h2>
+            <div class="box fadeIn_from_left">
+                <div class="profile_container">
+                    <div class="description">
+                        <h2>Ryo</h2>
+                        <p>調査役</p>
+                    </div>
+                    <img src="../public/pics/ryo_prof2.png" alt="ryo_profile_picture">
+                </div>
+            </div>
+
+
+            <div class="box fadeIn_from_right">
+                <div class="profile_container">
+                    <img src="../public/pics/miharu_prof2.png" alt="miharu_profile_picture">
+                    <div class="description">
+                        <h2>Miharu</h2>
+                        <p>質問、コメント役</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../public/css/script.js"></script>
+
+    {{ template "footer" .}}
+</body>
+
+</html>
+
+{{ end }}
