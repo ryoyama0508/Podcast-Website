@@ -94,7 +94,22 @@ func blog(w http.ResponseWriter, r *http.Request) {
 	tmpFiles := []string{
 		"view/blog_view/blog.html",
 		"view/blog_view/header.html",
-		"view/blog_view/footer.html",
+		"view/footer.html",
+	}
+
+	tmpl := template.Must(template.ParseFiles(tmpFiles...))
+
+	err := tmpl.ExecuteTemplate(w, "view", nil)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func contactUs(w http.ResponseWriter, r *http.Request) {
+	tmpFiles := []string{
+		"view/contact_view/contact.html",
+		"view/contact_view/header.html",
+		"view/footer.html",
 	}
 
 	tmpl := template.Must(template.ParseFiles(tmpFiles...))
@@ -116,9 +131,10 @@ func main() {
 
 	http.HandleFunc("/episode", rssFeed)
 	http.HandleFunc("/episodeAll", rssFeed2)
-	//don't know how to put number permanent link on every episode.
 
 	http.HandleFunc("/blog", blog)
+
+	http.HandleFunc("/contactUs", contactUs)
 
 	http.ListenAndServe(":8080", nil)
 }
