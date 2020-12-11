@@ -57,3 +57,6 @@ func makeTemplate(w http.ResponseWriter, r *http.Request, items []*gofeed.Item) 
 		panic(err)
 	}
 }
+
+//create generateHTML func after figure it out how to create header.html template
+//which has different color depending on which url called
