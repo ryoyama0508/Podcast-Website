@@ -18,7 +18,13 @@
     {{ template "header" .}}
 
     <main>
-        <h1>Contact us</h1>
+        <h1>お便り、お問い合わせはここから</h1>
+        <!-- change action later -->
+        <form action="main.go" method="POST" name="contact_form">
+            お名前（ハンドルネーム可）<input type="text">
+            メールアドレス<input type="email">
+            本文<textarea name="message"></textarea>
+        </form>
     </main>
 
     <script src="../public/css/script.js"></script>
