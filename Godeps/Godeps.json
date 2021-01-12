@@ -1,0 +1,6 @@
+{
+	"ImportPath": "github.com/kaloterrace_site",
+	"GoVersion": "go1.15",
+	"GodepVersion": "v80",
+	"Deps": []
+}
