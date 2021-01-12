@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 
-	"./handlers"
+	"github.com/kaloterrace_site/handlers"
 )
 
 func main() {
@@ -23,5 +24,9 @@ func main() {
 
 	http.HandleFunc("/contactUs", handlers.ContactUs)
 
-	http.ListenAndServe(":8080", nil)
+	/* http.ListenAndServe(":8080", nil) */
+	server := http.Server{
+		Addr: ":" + os.Getenv("PORT"),
+	}
+	server.ListenAndServe()
 }
