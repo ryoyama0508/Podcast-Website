@@ -17,8 +17,8 @@ func main() {
 
 	http.HandleFunc("/", handlers.TopPage)
 
-	/* http.HandleFunc("/episode", handlers.RecentEpisodes)
-	http.HandleFunc("/episodeAll", handlers.AllEpisodes) */
+	http.HandleFunc("/episode", handlers.RecentEpisodes)
+	http.HandleFunc("/episodeAll", handlers.AllEpisodes)
 
 	http.HandleFunc("/blog", handlers.Blog)
 
